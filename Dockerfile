@@ -12,8 +12,9 @@ CMD ["nginx", "-g", "daemon off;"]
 
 # STEP:5 Python3
 FROM python:3
-
+# STEP:6 Python3
 WORKDIR /home/takachin/web
-
+# STEP:7 Python3
 COPY requirements.txt ./
+# STEP:8 Python3
 RUN pip install --no-cache-dir -r requirements.txt
