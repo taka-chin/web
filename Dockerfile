@@ -9,3 +9,11 @@ COPY index.html /usr/share/nginx/html/test
 
 # STEP:4 Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
+
+# STEP:5 Python3
+FROM python:3
+
+WORKDIR /home/takachin/web
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
